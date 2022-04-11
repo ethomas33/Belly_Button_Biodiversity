@@ -44,7 +44,7 @@ function buildMetadata(sample) {
         PANEL.html("");
        //append a H6 heading to the panel and print the location of the volunteer to the panel 
        Object.entries(result).forEach(([key, value]) => {
-           PANEL.append("h6").text(`${key.toUpperCAse()}: ${value}`);
+           PANEL.append("h6").text(`${key.toUpperCase()}: ${value}`);
        });
 
     });
