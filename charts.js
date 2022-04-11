@@ -78,12 +78,16 @@ function buildCharts(sample) {
     var yticks = otu_ids.slice(0, 10).map(otu_id => `OTU ${otu_id}`).reverse()
 
     // 8. Create the trace for the bar chart. 
-    var barData = {
+    var trace1 = {
       x: samples_values.slice(0,10).reverse(),
       y: yticks,
+      text: otu_labels.slice(0,10).reverse(),
       type: 'bar',
       orientation: 'h'
     };
+    
+    var barData = [trace1];
+
     // 9. Create the layout for the bar chart. 
     var barLayout = {
       title: "Top 10 Bacteria Cultures Found"
